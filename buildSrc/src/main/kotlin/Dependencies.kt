@@ -6,6 +6,7 @@ object Versions {
     const val constraintLayout = "2.1.3"
     const val ktx = "1.7.0"
     const val material = "1.6.0-alpha02"
+    const val firebaseBom = "30.3.1"
 
     //Version codes for all the test libraries
     const val junit4 = "4.13.2"
@@ -34,16 +35,19 @@ object BuildPlugins {
     const val kotlinParcelizePlugin = "org.jetbrains.kotlin.plugin.parcelize"
     const val gradleVersionsPlugin = "com.github.ben-manes.versions"
     const val jacocoAndroid = "com.hiya.jacoco-android"
+    const val googleServicesPlugin = "com.google.gms.google-services"
 }
 
 object Libraries {
     //Any Library is added here
     const val kotlinStandardLibrary = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
-    const val constraintLayout =
-        "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val ktxCore = "androidx.core:core-ktx:${Versions.ktx}"
     const val materialComponents = "com.google.android.material:material:${Versions.material}"
+    const val firebaseBom = "com.google.firebase:firebase-bom:${Versions.firebaseBom}"
+    const val firebaseAuth = "com.google.firebase:firebase-auth-ktx"
+    const val firebaseStore = "com.google.firebase:firebase-firestore-ktx"
 }
 
 object TestLibraries {

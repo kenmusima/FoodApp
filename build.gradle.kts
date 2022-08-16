@@ -35,6 +35,7 @@ buildscript {
 
     dependencies {
         classpath("com.hiya:jacoco-android:$jacocoVersion")
+        classpath("com.google.gms:google-services:4.3.13")
     }
 }
 

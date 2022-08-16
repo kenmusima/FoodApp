@@ -1,3 +1,10 @@
 <resources>
-  <string name="app_name">GradlePlugins</string>
+    <string name="app_name">GradlePlugins</string>
+    <string name="login_txt">Login</string>
+    <string name="email_id_hint">Email ID</string>
+    <string name="password_hint">Password</string>
+    <string name="remember_me_chkbox">Remember Me</string>
+    <string name="login_btn">Login</string>
+    <string name="or">OR</string>
+    <string name="register_txt">New User? Click Here to Register</string>
 </resources>

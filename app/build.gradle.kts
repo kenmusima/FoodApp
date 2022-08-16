@@ -4,6 +4,7 @@ plugins {
     id(BuildPlugins.kotlinParcelizePlugin)
     id(BuildPlugins.ktlintPlugin)
     id(BuildPlugins.jacocoAndroid)
+    id(BuildPlugins.googleServicesPlugin)
 }
 
 jacoco {
@@ -45,6 +46,9 @@ android {
         implementation(Libraries.appCompat)
         implementation(Libraries.constraintLayout)
         implementation(Libraries.materialComponents)
+        implementation(platform(Libraries.firebaseBom))
+        implementation(Libraries.firebaseAuth)
+        implementation(Libraries.firebaseStore)
 
         androidTestImplementation(TestLibraries.testRunner)
         androidTestImplementation(TestLibraries.espresso)
