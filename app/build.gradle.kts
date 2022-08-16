@@ -14,7 +14,6 @@ jacoco {
 android {
 
     compileSdk = AndroidSdk.compileSdkVersion
-    android.buildFeatures.dataBinding = true
     android.buildFeatures.viewBinding = true
 
     defaultConfig {
