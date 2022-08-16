@@ -48,6 +48,7 @@ android {
         implementation(platform(Libraries.firebaseBom))
         implementation(Libraries.firebaseAuth)
         implementation(Libraries.firebaseStore)
+        implementation(Libraries.datastore)
 
         androidTestImplementation(TestLibraries.testRunner)
         androidTestImplementation(TestLibraries.espresso)
