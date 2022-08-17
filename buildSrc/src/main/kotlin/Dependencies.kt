@@ -7,6 +7,8 @@ object Versions {
     const val ktx = "1.7.0"
     const val material = "1.6.0-alpha02"
     const val firebaseBom = "30.3.1"
+    const val dataStore = "1.0.0"
+    const val googlePlayService = "20.2.0"
 
     //Version codes for all the test libraries
     const val junit4 = "4.13.2"
@@ -48,6 +50,8 @@ object Libraries {
     const val firebaseBom = "com.google.firebase:firebase-bom:${Versions.firebaseBom}"
     const val firebaseAuth = "com.google.firebase:firebase-auth-ktx"
     const val firebaseStore = "com.google.firebase:firebase-firestore-ktx"
+    const val datastore = "androidx.datastore:datastore-preferences-core:${Versions.dataStore}"
+    const val googlePlayServ = "com.google.android.gms:play-services-auth:${Versions.googlePlayService}"
 }
 
 object TestLibraries {

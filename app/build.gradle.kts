@@ -49,6 +49,7 @@ android {
         implementation(Libraries.firebaseAuth)
         implementation(Libraries.firebaseStore)
         implementation(Libraries.datastore)
+        implementation(Libraries.googlePlayServ)
 
         androidTestImplementation(TestLibraries.testRunner)
         androidTestImplementation(TestLibraries.espresso)
