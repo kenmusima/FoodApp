@@ -9,10 +9,15 @@
     tools:context=".ui.activity.LoginActivity">
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
         android:layout_margin="@dimen/dimen_8"
-        app:srcCompat="@drawable/ic_baseline_fastfood_24" />
+        android:padding="@dimen/dimen_8"
+        app:shapeAppearance="@style/ShapeAppearance.CircularBorder"
+        app:srcCompat="@drawable/ic_baseline_fastfood_24"
+        app:strokeColor="@color/md_theme_light_onPrimaryContainer"
+        app:strokeWidth="2dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,9 +27,9 @@
         android:textAppearance="@style/TextAppearance.Material3.TitleLarge" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/signInEmail"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:id="@+id/signInEmail"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_8"
         app:errorEnabled="true"
@@ -62,7 +67,7 @@
         android:layout_margin="@dimen/dimen_8"
         android:text="@string/remember_me_chkbox"
         android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
-        android:textColor="@color/md_theme_light_outline"/>
+        android:textColor="@color/md_theme_light_outline" />
 
     <ProgressBar
         android:id="@+id/signInProgressBar"
@@ -115,7 +120,7 @@
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/googleSignIn"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/orText"
             android:layout_centerHorizontal="true"
@@ -129,6 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:padding="@dimen/dimen_16"
             android:text="@string/register_txt"
             android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
             android:textColor="@color/md_theme_light_outline" />
