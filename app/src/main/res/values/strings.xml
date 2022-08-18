@@ -7,4 +7,9 @@
     <string name="login_btn">Login</string>
     <string name="or">OR Sign in with Google</string>
     <string name="register_txt">New User? Click Here to Register</string>
+    <string name="sign_uptxt">Sign Up</string>
+    <string name="create_account_txt">Create an account to order favorite food.</string>
+    <string name="username_txt">Username</string>
+    <string name="confirm_passwordtxt">Confirm Password</string>
+    <string name="register_btn_txt">Register</string>
 </resources>

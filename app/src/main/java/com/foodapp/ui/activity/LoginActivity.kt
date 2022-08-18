@@ -1,6 +1,5 @@
 package com.foodapp.ui.activity
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,7 +7,6 @@ import android.text.TextUtils
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import com.foodapp.MainActivity
 import com.foodapp.databinding.ActivityLoginBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -24,9 +22,7 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-
 class LoginActivity : AppCompatActivity() {
-
 
     private lateinit var binding: ActivityLoginBinding
     private lateinit var auth: FirebaseAuth
@@ -66,9 +62,8 @@ class LoginActivity : AppCompatActivity() {
         binding.googleSignIn.setOnClickListener { googleSignIn() }
 
         binding.registerTxt.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -96,10 +91,9 @@ class LoginActivity : AppCompatActivity() {
                     ).show()
                 }
             }
-
         } catch (e: ApiException) {
 
-            Log.w(TAG, "signInResult:failed code=" + e.statusCode);
+            Log.w(TAG, "signInResult:failed code=" + e.statusCode)
         }
     }
 
@@ -134,9 +128,7 @@ class LoginActivity : AppCompatActivity() {
                 .addOnFailureListener {
                     Snackbar.make(binding.root, it.message.toString(), Snackbar.LENGTH_SHORT).show()
                 }
-
         }
-
     }
 
     override fun onStart() {
