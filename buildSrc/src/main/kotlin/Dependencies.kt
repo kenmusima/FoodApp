@@ -9,6 +9,7 @@ object Versions {
     const val firebaseBom = "30.3.1"
     const val dataStore = "1.0.0"
     const val googlePlayService = "20.2.0"
+    const val nav_version = "2.5.1"
 
     //Version codes for all the test libraries
     const val junit4 = "4.13.2"
@@ -52,6 +53,8 @@ object Libraries {
     const val firebaseStore = "com.google.firebase:firebase-firestore-ktx"
     const val datastore = "androidx.datastore:datastore-preferences-core:${Versions.dataStore}"
     const val googlePlayServ = "com.google.android.gms:play-services-auth:${Versions.googlePlayService}"
+    const val navFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.nav_version}"
+    const val navUI = "androidx.navigation:navigation-ui-ktx:${Versions.nav_version}"
 }
 
 object TestLibraries {
