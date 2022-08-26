@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_8"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+
+    app:cardElevation="@dimen/card_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/food_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            tools:src="@drawable/ic_baseline_settings_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/food_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Ugali saucer"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dimen_16"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/food_image"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"/>
+        <ImageView
+            android:id="@+id/food_rating"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_star_24"
+            app:layout_constraintTop_toBottomOf="@id/food_title"
+            app:layout_constraintStart_toEndOf="@id/food_image"
+            app:layout_constraintTop_toTopOf="@id/food_rating_txt"
+            app:layout_constraintBottom_toBottomOf="@id/food_rating_txt"
+            />
+
+        <TextView
+            android:id="@+id/food_rating_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_8"
+            app:layout_constraintStart_toEndOf="@id/food_rating"
+            app:layout_constraintTop_toBottomOf="@id/food_title"
+            tools:text="4.9"/>
+        <TextView
+            android:id="@+id/food_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Ksh 1000.00"
+            app:layout_constraintTop_toBottomOf="@id/food_rating"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/food_image"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"/>
+</com.google.android.material.card.MaterialCardView>
