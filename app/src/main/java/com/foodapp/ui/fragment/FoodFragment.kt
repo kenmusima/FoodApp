@@ -6,55 +6,50 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.foodapp.R
+import com.foodapp.databinding.FragmentFoodBinding
+import com.foodapp.ui.adapter.ViewPager
+import com.google.android.material.tabs.TabLayoutMediator
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [FoodFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class FoodFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentFoodBinding? = null
+    private val binding: FragmentFoodBinding
+        get() = _binding!!
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_food, container, false)
-    }
+        _binding = FragmentFoodBinding.inflate(inflater,container,false)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment FoodFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            FoodFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+        val pagerAdapter = ViewPager(requireActivity().supportFragmentManager, viewLifecycleOwner.lifecycle)
+
+        binding.viewPager.adapter = pagerAdapter
+        TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
+            when (position) {
+                0 -> {
+                    tab.text = "Local"
+                }
+                1 -> {
+                    tab.text = "International"
+                }
+                2 -> {
+                    tab.text = "Vegan"
+                }
+                3 -> {
+                    tab.text = "Swahili"
+                }
+                4 -> {
+                    tab.text = "Dessert"
                 }
             }
+        }.attach()
+        return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
