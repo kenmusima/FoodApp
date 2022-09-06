@@ -18,4 +18,6 @@
     <string name="home_title">Home</string>
     <string name="hello_blank_fragment">Hello fragment</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula semper ante vitae laoreet. Fusce a eros tincidunt, egestas leo eu, vulputate magna. Fusce rhoncus condimentum est eget finibus. Morbi sed imperdiet mauris. Nullam non magna vehicula, tristique justo tincidunt, gravida nisi. Suspendisse diam mauris, rutrum sed dui a, ultricies.</string>
+    <string name="sample_price">Ksh 3000</string>
+    <string name="total_price">Total Price</string>
 </resources>
