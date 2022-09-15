@@ -23,7 +23,7 @@ class FoodFragment : Fragment() {
     ): View? {
         _binding = FragmentFoodBinding.inflate(inflater,container,false)
 
-        val pagerAdapter = ViewPager(requireActivity().supportFragmentManager, viewLifecycleOwner.lifecycle)
+        val pagerAdapter = ViewPager(this)
 
         binding.viewPager.adapter = pagerAdapter
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->

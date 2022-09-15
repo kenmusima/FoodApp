@@ -1,7 +1,7 @@
 package com.foodapp.ui.adapter
 
 import androidx.fragment.app.Fragment
- frimport androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.foodapp.ui.fragment.fooditems.*
 
 class ViewPager(fa: Fragment) : FragmentStateAdapter(fa){
