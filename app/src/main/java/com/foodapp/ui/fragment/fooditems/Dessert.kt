@@ -6,55 +6,33 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.foodapp.R
+import com.foodapp.data.model.Food
+import com.foodapp.databinding.FragmentDessertBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Dessert.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Dessert : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentDessertBinding? = null
+    private val binding: FragmentDessertBinding
+        get() = _binding!!
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dessert, container, false)
+        _binding = FragmentDessertBinding.inflate(inflater,container,false)
+        val view = binding.root
+
+        val foods = listOf(
+            Food(1,"Pecan chocolate bread",4.0,"Very delicious","kdks",9000),
+            Food(2,"Lemon meringue pie",4.9,"Very delicious","kdks",9000),
+            Food(3,"Coconut yoghurt cake",4.0,"Very delicious","kdks",9000),
+            Food(4,"Gallo Pinto",4.0,"Very delicious","kdks",9000)
+        )
+
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Dessert.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Dessert().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }
