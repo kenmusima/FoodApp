@@ -1,42 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.activity.PaymentActivity">
 
-    <LinearLayout
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ExpandableListView
+        android:id="@+id/orders"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_margin="@dimen/dimen_16"
+        tools:listheader="@layout/list_group"
+        tools:listitem="@layout/list_item_payment"
+        android:dividerHeight="0.5dp" />
 
-        <ExpandableListView
-            android:id="@+id/orders"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/select_payment"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dimen_8"
-            android:hint="Select Payment Option">
+            android:orientation="vertical">
 
-            <AutoCompleteTextView
-                android:id="@+id/payment_autocomplete_txtview"
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/select_payment"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="none"
-                tools:text="MPESA" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_16"
+                android:hint="Select Payment Option">
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/paymentFragmentContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:name="com.foodapp.ui.payment.MpesaFragment" />
-    </LinearLayout>
+                <AutoCompleteTextView
+                    android:id="@+id/payment_autocomplete_txtview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none"
+                    tools:text="MPESA" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-</ScrollView>
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/paymentFragmentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/dimen_16" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

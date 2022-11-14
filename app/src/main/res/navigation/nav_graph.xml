@@ -7,17 +7,65 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="com.foodapp.ui.fragment.FoodFragment"
-        tools:layout="@layout/fragment_food" />
+        android:name="com.foodapp.ui.food.FoodFragment"
+        tools:layout="@layout/fragment_food" >
+        <action
+            android:id="@+id/action_home_to_orderItemFragment"
+            app:destination="@id/orderItemFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cart"
-        android:name="com.foodapp.ui.fragment.CartFragment"
-        tools:layout="@layout/fragment_cart" />
-    <fragment
-        android:id="@+id/settings"
-        android:name="com.foodapp.ui.fragment.SettingsFragment"
-        tools:layout="@layout/fragment_settings" />
+        android:name="com.foodapp.ui.cart.CartFragment"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cart_to_paymentFragment"
+            app:destination="@id/payment" />
+        <action
+            android:id="@+id/action_cart_to_home"
+            app:destination="@id/home" />
+    </fragment>
     <fragment
         android:id="@+id/favorite"
-        android:name="com.foodapp.ui.fragment.FavoriteFragment" />
+        android:name="com.foodapp.ui.favourite.FavoriteFragment" >
+        <action
+            android:id="@+id/action_favorite_to_orderItemFragment"
+            app:destination="@id/orderItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderItemFragment"
+        android:name="com.foodapp.ui.food.OrderItemFragment"
+
+        tools:layout="@layout/fragment_order_item" >
+        <argument
+            android:name="foodItem"
+            app:argType="com.foodapp.data.db.entity.Food" />
+        <action
+            android:id="@+id/action_orderItemFragment_to_cart"
+            app:destination="@id/cart"
+            app:popUpTo="@id/home"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <activity
+        android:id="@+id/payment"
+        android:name="com.foodapp.ui.activity.PaymentActivity"
+        android:label="activity_payment"
+        tools:layout="@layout/activity_payment" >
+        <argument
+            android:name="orders"
+            app:argType="integer[]" />
+    </activity>
+    <fragment
+        android:id="@+id/mpesaFragment"
+        android:name="com.foodapp.ui.payment.MpesaFragment"
+        android:label="fragment_mpesa"
+        tools:layout="@layout/fragment_mpesa" />
+    <fragment
+        android:id="@+id/visaFragment"
+        android:name="com.foodapp.ui.payment.VisaFragment"
+        android:label="fragment_visa"
+        tools:layout="@layout/fragment_visa" />
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.foodapp.ui.activity.HomeActivity"
+        android:label="HomeActivity" />
 </navigation>

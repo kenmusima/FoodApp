@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GradlePlugins</string>
+    <string name="app_name">Delicacy</string>
     <string name="login_txt">Login</string>
     <string name="email_id_hint">Email ID</string>
     <string name="password_hint">Password</string>
@@ -20,4 +20,11 @@
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula semper ante vitae laoreet. Fusce a eros tincidunt, egestas leo eu, vulputate magna. Fusce rhoncus condimentum est eget finibus. Morbi sed imperdiet mauris. Nullam non magna vehicula, tristique justo tincidunt, gravida nisi. Suspendisse diam mauris, rutrum sed dui a, ultricies.</string>
     <string name="sample_price">Ksh 3000</string>
     <string name="total_price">Total Price</string>
+    <string name="price_currency">%1$s %2$d</string>
+    <string name="user_greetings">Hi %1$s,</string>
+    <string-array name="payments_options">
+        <item>MPESA</item>
+        <item>VISA Card</item>
+    </string-array>
+
 </resources>

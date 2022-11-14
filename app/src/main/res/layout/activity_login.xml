@@ -80,7 +80,7 @@
         android:id="@+id/signInBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen_8"
+        android:layout_marginStart="@dimen/dimen_16"
         android:layout_marginEnd="@dimen/dimen_16"
         android:text="@string/login_btn"
         android:textAllCaps="false" />

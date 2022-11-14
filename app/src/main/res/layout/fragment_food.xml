@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.fragment.FoodFragment">
+    android:focusableInTouchMode="true"
+    tools:context=".ui.food.types.FoodFragment">
 
 
     <TextView
@@ -13,17 +14,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_8"
-        android:text="Hi" />
+        android:text="@string/user_greetings"
+        android:textAppearance="@style/TextAppearance.Material3.TitleSmall" />
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search_meals"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_8"
-        android:background="@color/md_theme_light_secondaryContainer"
-        app:queryBackground="@color/md_theme_light_secondaryContainer"
-        app:queryHint="Search for meals"
-        app:submitBackground="@drawable/bg_white_rounded" />
+        android:textAlignment="textStart"
+        android:background="@drawable/bg_white_rounded"
+        app:queryBackground="@android:color/transparent"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search for meals" />
 
     <include layout="@layout/discount_cardview" />
 
@@ -38,7 +41,8 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="0dp" />
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 
 </LinearLayout>

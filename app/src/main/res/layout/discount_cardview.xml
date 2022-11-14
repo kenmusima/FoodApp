@@ -26,7 +26,7 @@
             android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Black Friday Discount" />
+            android:text="Black Friday Discount" />
 
         <TextView
             android:id="@+id/discount_code"
@@ -35,7 +35,7 @@
             android:layout_margin="@dimen/dimen_8"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/discount_status"
-            tools:text="Use promo code : 45JGH" />
+            android:text="Use promo code : 45JGH" />
 
 
         <com.google.android.material.button.MaterialButton
@@ -53,10 +53,13 @@
             android:layout_height="100dp"
             android:layout_margin="@dimen/dimen_8"
             android:scaleType="fitCenter"
+            app:shapeAppearance="@style/ShapeAppearance.CircularBorder"
+            android:src="@drawable/burger2"
+            android:backgroundTint="@color/md_theme_light_primaryContainer"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/ic_baseline_settings_24" />
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
