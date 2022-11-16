@@ -5,11 +5,14 @@ object Versions {
     const val appCompat = "1.4.1"
     const val constraintLayout = "2.1.3"
     const val ktx = "1.7.0"
-    const val material = "1.6.0-alpha02"
+    const val material = "1.5.0"
     const val firebaseBom = "30.3.1"
-    const val dataStore = "1.0.0"
+    const val dataStore = "1.0.0-alpha08"
     const val googlePlayService = "20.2.0"
     const val nav_version = "2.5.1"
+    const val glide = "4.13.2"
+    const val room = "2.4.3"
+    const val hilt = "2.38.1"
 
     //Version codes for all the test libraries
     const val junit4 = "4.13.2"
@@ -39,6 +42,8 @@ object BuildPlugins {
     const val gradleVersionsPlugin = "com.github.ben-manes.versions"
     const val jacocoAndroid = "com.hiya.jacoco-android"
     const val googleServicesPlugin = "com.google.gms.google-services"
+    const val hilt = "dagger.hilt.android.plugin"
+    const val safeArgs = "androidx.navigation.safeargs.kotlin"
 }
 
 object Libraries {
@@ -51,10 +56,17 @@ object Libraries {
     const val firebaseBom = "com.google.firebase:firebase-bom:${Versions.firebaseBom}"
     const val firebaseAuth = "com.google.firebase:firebase-auth-ktx"
     const val firebaseStore = "com.google.firebase:firebase-firestore-ktx"
-    const val datastore = "androidx.datastore:datastore-preferences-core:${Versions.dataStore}"
+    const val datastore = "androidx.datastore:datastore-preferences:${Versions.dataStore}"
     const val googlePlayServ = "com.google.android.gms:play-services-auth:${Versions.googlePlayService}"
     const val navFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.nav_version}"
     const val navUI = "androidx.navigation:navigation-ui-ktx:${Versions.nav_version}"
+    const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+    const val glideAnnotation = "com.github.bumptech.glide:compiler:${Versions.glide}"
+    const val room = "androidx.room:room-runtime:${Versions.room}"
+    const val roomAnnotation ="androidx.room:room-compiler:${Versions.room}"
+    const val roomKtx = "androidx.room:room-ktx:${Versions.room}"
+    const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
+    const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
 }
 
 object TestLibraries {
