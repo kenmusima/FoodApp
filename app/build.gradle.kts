@@ -5,6 +5,9 @@ plugins {
     id(BuildPlugins.ktlintPlugin)
     id(BuildPlugins.jacocoAndroid)
     id(BuildPlugins.googleServicesPlugin)
+    id(BuildPlugins.hilt)
+    id(BuildPlugins.safeArgs)
+    kotlin("kapt")
 }
 
 jacoco {
@@ -62,6 +65,14 @@ android {
         implementation(Libraries.googlePlayServ)
         implementation(Libraries.navFragment)
         implementation(Libraries.navUI)
+        implementation(Libraries.glide)
+        kapt(Libraries.glideAnnotation)
+
+        implementation(Libraries.room)
+        implementation(Libraries.roomKtx)
+        kapt(Libraries.roomAnnotation)
+        implementation(Libraries.hilt)
+        kapt(Libraries.hiltCompiler)
 
         androidTestImplementation(TestLibraries.testRunner)
         androidTestImplementation(TestLibraries.espresso)
