@@ -2,14 +2,14 @@ package com.foodapp.ui.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.foodapp.ui.fragment.fooditems.*
+import com.foodapp.ui.food.types.*
 
 class ViewPager(fa: Fragment) : FragmentStateAdapter(fa){
     override fun getItemCount(): Int = 5
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> LocalFragment()
+            0 -> Local()
             1 -> International()
             2 -> Vegan()
             3 -> Swahili()
