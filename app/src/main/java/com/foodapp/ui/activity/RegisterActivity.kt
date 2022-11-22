@@ -1,15 +1,12 @@
 package com.foodapp.ui.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.text.TextWatcher
 import android.util.Patterns
 import android.view.View
 import android.widget.Toast
-import com.foodapp.MainActivity
-import com.foodapp.R
+import androidx.appcompat.app.AppCompatActivity
 import com.foodapp.databinding.ActivityRegisterBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
@@ -31,7 +28,6 @@ class RegisterActivity : AppCompatActivity() {
         auth = Firebase.auth
 
         binding.btnRegister.setOnClickListener { validateCredentials() }
-
     }
 
     private fun validateCredentials() {
@@ -105,7 +101,7 @@ class RegisterActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
             if (it.isSuccessful) {
 
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, HomeActivity::class.java))
                 finish()
             } else {
                 binding.progressBarRegister.visibility = View.GONE
