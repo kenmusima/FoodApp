@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:focusableInTouchMode="true"
-    tools:context=".ui.food.types.FoodFragment">
+    tools:context=".ui.food.FoodFragment">
 
 
     <TextView
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_8"
         android:textAlignment="textStart"
-        android:background="@drawable/bg_white_rounded"
+        android:background="@drawable/bg_midday_sun_rounded"
         app:queryBackground="@android:color/transparent"
         app:iconifiedByDefault="false"
         app:queryHint="Search for meals" />

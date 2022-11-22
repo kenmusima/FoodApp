@@ -24,6 +24,26 @@
     <string name="user_greetings">Hi %1$s,</string>
     <string name="add_order">Select order</string>
     <string name="order_rating_icon">order rating icon</string>
+    <string name="black_friday_discount_txt">Black Friday Discount</string>
+    <string name="promo_code_txt">Use promo code : 45JGH</string>
+    <string name="btn_discount_txt">Get Your Order</string>
+    <string name="image_food_description">Image of selected food</string>
+    <string name="zero_value">0</string>
+    <string name="food_description_txt">Description</string>
+    <string name="add_to_cart_txt">Add to Cart</string>
+    <string name="payment_option_txt">Select Payment Option</string>
+    <string name="mpesa_txt">MPESA</string>
+    <string name="checkout_txt">Checkout</string>
+    <string name="card_name">Card Name</string>
+    <string name="card_number">Card Number</string>
+    <string name="credit_date_format">MM/YY</string>
+    <string name="cvv_number">CVV</string>
+    <string name="btn_pay_txt">Pay</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="logout">Logout</string>
+    <string name="user_profile_photo">User profile photo</string>
+    <string name="no_selections">No selections, yet.</string>
+    <string name="items_in_the_cart">You don\'t have any items in the cart</string>
     <string-array name="payments_options">
         <item>MPESA</item>
         <item>VISA Card</item>
