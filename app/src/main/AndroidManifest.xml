@@ -27,7 +27,11 @@
         </activity>
         <activity
             android:name=".ui.activity.PaymentActivity"
-            android:exported="false" />
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.foodapp.ui.activity.HomeActivity"/>
+        </activity>
     </application>
 
 </manifest>
