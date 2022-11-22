@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_margin="@dimen/dimen_8"
     app:cardCornerRadius="@dimen/card_corner_radius"
@@ -26,7 +25,7 @@
             android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="Black Friday Discount" />
+            android:text="@string/black_friday_discount_txt" />
 
         <TextView
             android:id="@+id/discount_code"
@@ -35,14 +34,14 @@
             android:layout_margin="@dimen/dimen_8"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/discount_status"
-            android:text="Use promo code : 45JGH" />
+            android:text="@string/promo_code_txt" />
 
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/discount_order_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Get Your Order"
+            android:text="@string/btn_discount_txt"
             android:layout_margin="@dimen/dimen_8"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/discount_code" />
@@ -54,7 +53,7 @@
             android:layout_margin="@dimen/dimen_8"
             android:scaleType="fitCenter"
             app:shapeAppearance="@style/ShapeAppearance.CircularBorder"
-            android:src="@drawable/burger2"
+            android:src="@drawable/burger"
             android:backgroundTint="@color/md_theme_light_primaryContainer"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

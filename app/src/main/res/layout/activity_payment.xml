@@ -3,21 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".ui.activity.PaymentActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        app:title="  Payment"
+        app:navigationIcon="@drawable/ic_baseline_back_24"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        android:layout_height="?attr/actionBarSize" />
+    </com.google.android.material.appbar.AppBarLayout>
+
     <ExpandableListView
         android:id="@+id/orders"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_16"
+        android:dividerHeight="0.5dp"
         tools:listheader="@layout/list_group"
-        tools:listitem="@layout/list_item_payment"
-        android:dividerHeight="0.5dp" />
+        tools:listitem="@layout/list_item_payment" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -35,13 +46,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dimen_16"
-                android:hint="Select Payment Option">
+                android:hint="@string/payment_option_txt">
 
                 <AutoCompleteTextView
                     android:id="@+id/payment_autocomplete_txtview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="none"
+                    android:hint="@string/mpesa_txt"
                     tools:text="MPESA" />
             </com.google.android.material.textfield.TextInputLayout>
 

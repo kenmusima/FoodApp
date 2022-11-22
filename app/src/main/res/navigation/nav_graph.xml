@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/orderItemFragment"
-        android:name="com.foodapp.ui.food.OrderItemFragment"
+        android:name="com.foodapp.ui.order.OrderItemFragment"
 
         tools:layout="@layout/fragment_order_item" >
         <argument
@@ -54,16 +54,6 @@
             android:name="orders"
             app:argType="integer[]" />
     </activity>
-    <fragment
-        android:id="@+id/mpesaFragment"
-        android:name="com.foodapp.ui.payment.MpesaFragment"
-        android:label="fragment_mpesa"
-        tools:layout="@layout/fragment_mpesa" />
-    <fragment
-        android:id="@+id/visaFragment"
-        android:name="com.foodapp.ui.payment.VisaFragment"
-        android:label="fragment_visa"
-        tools:layout="@layout/fragment_visa" />
     <activity
         android:id="@+id/homeActivity"
         android:name="com.foodapp.ui.activity.HomeActivity"

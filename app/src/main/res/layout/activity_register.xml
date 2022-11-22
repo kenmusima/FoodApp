@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/dimen_16"
     android:orientation="vertical"
     tools:context=".ui.activity.RegisterActivity">
 
@@ -15,14 +14,14 @@
         android:layout_margin="@dimen/dimen_8"
         android:padding="@dimen/dimen_8"
         app:shapeAppearance="@style/ShapeAppearance.CircularBorder"
-        app:srcCompat="@drawable/ic_baseline_fastfood_24"
+        app:srcCompat="@drawable/app_animate_icon"
         app:strokeColor="@color/md_theme_light_onPrimaryContainer"
         app:strokeWidth="2dp" />
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_16"
-        android:layout_marginStart="@dimen/dimen_8"
+        android:layout_marginStart="@dimen/dimen_16"
         android:text="@string/sign_uptxt"
         android:textStyle="bold"
         android:layout_gravity="start"
@@ -31,7 +30,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen_8"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:layout_marginStart="@dimen/dimen_16"
         android:textStyle="bold"
         android:layout_gravity="start"
         android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
@@ -42,7 +42,9 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen_8"
+        android:layout_marginEnd="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:layout_marginStart="@dimen/dimen_16"
         app:errorEnabled="true"
         app:startIconDrawable="@drawable/ic_baseline_person_24">
 
@@ -58,7 +60,9 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen_8"
+        android:layout_marginEnd="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:layout_marginStart="@dimen/dimen_16"
         app:errorEnabled="true"
         app:startIconDrawable="@drawable/ic_baseline_email_24">
 
@@ -74,7 +78,9 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen_8"
+        android:layout_marginEnd="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:layout_marginStart="@dimen/dimen_16"
         app:errorEnabled="true"
         app:passwordToggleEnabled="true"
         app:startIconDrawable="@drawable/ic_baseline_lock_24">
@@ -91,7 +97,9 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen_8"
+        android:layout_marginEnd="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:layout_marginStart="@dimen/dimen_16"
         app:errorEnabled="true"
         app:passwordToggleEnabled="true"
         app:startIconDrawable="@drawable/ic_baseline_lock_24">
@@ -112,7 +120,9 @@
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen_8"
+        android:layout_marginEnd="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:layout_marginStart="@dimen/dimen_16"
         android:text="@string/register_btn_txt" />
 
 </LinearLayout>
