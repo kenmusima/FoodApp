@@ -3,4 +3,5 @@
     <string name="remember_me_chkbox">Remember Me</string>
     <string name="login_btn">Login</string>
     <string name="user_greetings">Hi %1$s,</string>
+    <string name="add_order">Select order</string>
 </resources>

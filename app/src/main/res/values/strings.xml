@@ -8,7 +8,7 @@
     <string name="or">OR Sign in with Google</string>
     <string name="register_txt">New User? Click Here to Register</string>
     <string name="sign_uptxt">Sign Up</string>
-    <string name="create_account_txt">Create an account to order favorite food.</string>
+    <string name="create_account_txt">Create an account to order your favorite food.</string>
     <string name="username_txt">Username</string>
     <string name="confirm_passwordtxt">Confirm Password</string>
     <string name="register_btn_txt">Register</string>
@@ -22,6 +22,8 @@
     <string name="total_price">Total Price</string>
     <string name="price_currency">%1$s %2$d</string>
     <string name="user_greetings">Hi %1$s,</string>
+    <string name="add_order">Select order</string>
+    <string name="order_rating_icon">order rating icon</string>
     <string-array name="payments_options">
         <item>MPESA</item>
         <item>VISA Card</item>
