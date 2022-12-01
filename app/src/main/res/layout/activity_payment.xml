@@ -15,7 +15,7 @@
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolBar"
         android:layout_width="match_parent"
-        app:title="  Payment"
+        app:title=" "
         app:navigationIcon="@drawable/ic_baseline_back_24"
         style="@style/Widget.MaterialComponents.Toolbar.Primary"
         android:layout_height="?attr/actionBarSize" />
@@ -52,8 +52,9 @@
                     android:id="@+id/payment_autocomplete_txtview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="none"
                     android:hint="@string/mpesa_txt"
+                    android:inputType="none"
+                    android:textColor="#8D6E63"
                     tools:text="MPESA" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -62,7 +63,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_margin="@dimen/dimen_16" />
+                android:layout_margin="@dimen/dimen_16"
+                android:name="com.foodapp.ui.payment.MpesaFragment"
+                tools:layout="@layout/fragment_mpesa" />
         </LinearLayout>
     </ScrollView>
 

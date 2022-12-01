@@ -39,7 +39,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email_id_hint"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textColorHint="#8D6E63" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -56,7 +57,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password_hint"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textColorHint="#8D6E63" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.checkbox.MaterialCheckBox
@@ -67,7 +69,7 @@
         android:layout_margin="@dimen/dimen_8"
         android:text="@string/remember_me_chkbox"
         android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
-        android:textColor="@color/md_theme_light_outline" />
+        android:textColor="#8D6E63" />
 
     <ProgressBar
         android:id="@+id/signInProgressBar"
@@ -137,7 +139,7 @@
             android:padding="@dimen/dimen_16"
             android:text="@string/register_txt"
             android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
-            android:textColor="@color/md_theme_light_outline" />
+            android:textColor="#8D6E63" />
     </RelativeLayout>
 
 </LinearLayout>
